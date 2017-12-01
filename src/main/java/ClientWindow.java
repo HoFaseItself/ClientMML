@@ -73,7 +73,9 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         setVisible(true);
 
         try {
-            System.out.println(IP_ADDR);
+//        сейчас устанавливаю дефолтные пароли для тестов, потом надо удалить
+            login = "smednyh";
+            password = "SoftX3000";
 //        инициализируем присоединение к серверу
             connection = new TCPConnection(this, IP_ADDR, PORT);
         } catch (IOException e) { printMsg("Connection exception: " + e);}
@@ -81,7 +83,7 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
 
 //        формируем стороку команды для логирования
     private String logining() {
-        return "LGI:op=\"" + login + "\", PWD =\"" + password + "\", SER=\"10.188.4.154---O&M System\";" + "\r\n";
+        return "LGI:op=\"" + login + "\", PWD =\"" + password + "\", SER=\"" + IP_ADDR + "---O&M System\";" + "\r\n";
     }
 
     @Override
@@ -89,7 +91,7 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         String msg = fieldInput.getText();
         if (msg.equals("")) return;
         fieldInput.setText(null);
-//  посылаем команду на сервер
+//        посылаем команду на сервер
         try {
             connection.sendString(new CheckerInputCommand().checkingFirst(msg));
         } catch (IOException e1) {
@@ -99,30 +101,38 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     }
 
 
+//        after connected send command for authorization
     @Override
     public void onConnectionReady(TCPConnection tcpConnection) {
         printMsg("Connection ready...");
-//        after connected send command for authorization
         connection.sendString(logining());
     }
 
+
+//        sending message (String)
     @Override
     public void onReceiveString(TCPConnection tcpConnection, String value) {
         printMsg(value);
+//        здесь у нас значения, которые приходят от сервера
 //        System.out.println("----------------------------------------");
         outputFlow.add(value);
     }
 
+
+//    reaction to Disconnect
     @Override
     public void onDisconnect(TCPConnection tcpConnection) {
         printMsg("Connection close!");
     }
 
+
+//    reaction to connection
     @Override
     public void onException(TCPConnection tcpConnection, Exception e) {
         printMsg("Connection exception: " + e);
     }
 
+//    printing message
     private synchronized void printMsg(final String msg) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -142,13 +152,13 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
             }
         });
     }
-//    public void connectToServer() {
-//        try {
-//            connection = new TCPConnection(this, IP_ADDR, PORT);
-//        } catch (IOException e) {
-//            printMsg("Connection exception: " + e);
-//        }
-//    }
+    public void connectToServer() {
+        try {
+            connection = new TCPConnection(this, IP_ADDR, PORT);
+        } catch (IOException e) {
+            printMsg("Connection exception: " + e);
+        }
+    }
 }
 
 
