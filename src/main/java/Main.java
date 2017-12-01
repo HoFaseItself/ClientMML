@@ -2,6 +2,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        new Thread(new Client("test")).start();
+//        start programm
+        new ClientWindow();
     }
 }

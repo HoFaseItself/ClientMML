@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ForWorkInHuawei:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ForWorkInHuawei_jar</output-path>
+    <root id="archive" name="ForWorkInHuawei.jar">
+      <element id="module-output" name="ForWorkInHuawei" />
+    </root>
+  </artifact>
+</component>
