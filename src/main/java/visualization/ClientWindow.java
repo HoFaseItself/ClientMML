@@ -1,6 +1,8 @@
+package visualization;
 
 import network.TCPConnection;
 import network.TCPConnectionListener;
+import SpecCommands.CheckerInputCommand;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,6 +12,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ClientWindow extends JFrame implements ActionListener, TCPConnectionListener{
+
+    public static ArrayList<MsgFromServer> getMessages() {
+        return messages;
+    }
+
+    public static void setMessages(ArrayList<MsgFromServer> messages) {
+        ClientWindow.messages = messages;
+    }
+
+    private static ArrayList<MsgFromServer> messages = new ArrayList<MsgFromServer>();
+
 
     public static ArrayList<String> outputFlow = new ArrayList<String>();
 //    задаются переменные для того чтобы выбрать адресс сервера и авторизоваться на нем
@@ -66,7 +79,7 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
 //        добавлем пролистываемые панели на поле
         add(scrollPane, BorderLayout.CENTER);
         add(scrollSpecPane, BorderLayout.NORTH);
-//        добавляем прослугивание активностей в водимом поле (для того чтобы после энтера передавалось сообщение)
+//        добавляем прослушивание активностей в водимом поле (для того чтобы после энтера передавалось сообщение)
         fieldInput.addActionListener(this);
         add(fieldInput, BorderLayout.SOUTH);
 
@@ -81,7 +94,7 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         } catch (IOException e) { printMsg("Connection exception: " + e);}
     }
 
-//        формируем стороку команды для логирования
+//        формируем стороку команды для авторизации
     private String logining() {
         return "LGI:op=\"" + login + "\", PWD =\"" + password + "\", SER=\"" + IP_ADDR + "---O&M System\";" + "\r\n";
     }
@@ -94,10 +107,11 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
 //        посылаем команду на сервер
         try {
             connection.sendString(new CheckerInputCommand().checkingFirst(msg));
+            System.out.println(msg);
         } catch (IOException e1) {
             e1.printStackTrace();
         }
-        connection.sendString(msg);
+//        connection.sendString(msg);
     }
 
 
@@ -105,7 +119,8 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     @Override
     public void onConnectionReady(TCPConnection tcpConnection) {
         printMsg("Connection ready...");
-        connection.sendString(logining());
+        String loginSrtring = logining();
+        connection.sendString(loginSrtring);
     }
 
 
@@ -114,7 +129,8 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     public void onReceiveString(TCPConnection tcpConnection, String value) {
         printMsg(value);
 //        здесь у нас значения, которые приходят от сервера
-//        System.out.println("----------------------------------------");
+
+        messages.add(new MsgFromServer(value));
         outputFlow.add(value);
     }
 
@@ -143,7 +159,7 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         });
     }
 
-    public synchronized void printMsgspec(final String msg) {
+    public synchronized void printMsgSpec(final String msg) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {

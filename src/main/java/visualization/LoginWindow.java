@@ -1,3 +1,8 @@
+package visualization;
+
+import visualization.ClientWindow;
+import workWithFiles.ListOfServers;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionEvent;
@@ -14,7 +19,7 @@ public class LoginWindow extends JFrame implements ActionListener{
     Box mainBox;
     ListOfServers listOfServers;
 
-    LoginWindow() throws FileNotFoundException {
+    public LoginWindow() throws FileNotFoundException {
         super("Вход в систему");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,14 +75,14 @@ public class LoginWindow extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e)  {
-//        sending authorization data to class ClientWindow
+//        sending authorization data to class visualization.ClientWindow
         ClientWindow.setLogin(loginField.getText());
         ClientWindow.setPassword(passwordField.getText());
         ClientWindow.setIpAddr(listOfServers.getServersList()[hostField.getSelectedIndex()]);
 //        mainBox.setVisible(false);
 //        close window for authorization
         dispose();
-//        starting ClientWindow
+//        starting visualization.ClientWindow
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
