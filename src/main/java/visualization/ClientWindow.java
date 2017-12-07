@@ -1,5 +1,7 @@
 package visualization;
 
+import SpecCommands.FindCnacld;
+import SpecCommands.SpecCommand;
 import network.TCPConnection;
 import network.TCPConnectionListener;
 import SpecCommands.CheckerInputCommand;
@@ -8,20 +10,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class ClientWindow extends JFrame implements ActionListener, TCPConnectionListener{
 
-    public static ArrayList<MsgFromServer> getMessages() {
-        return messages;
-    }
-
-    public static void setMessages(ArrayList<MsgFromServer> messages) {
-        ClientWindow.messages = messages;
-    }
-
-    private static ArrayList<MsgFromServer> messages = new ArrayList<MsgFromServer>();
+    public static ArrayList<MsgFromServer> messages = new ArrayList<MsgFromServer>();
+    public static ArrayList<String> meSSage = new ArrayList<String>();
 
 
     public static ArrayList<String> outputFlow = new ArrayList<String>();
@@ -60,7 +55,7 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
 //    Socket соединение через клас TCPConnection
     public static TCPConnection connection;
 
-    public ClientWindow() {
+    public ClientWindow() throws IOException {
 //        настраиваем диалоговое окно
 //        при закрытии окна закрываем программу
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -110,6 +105,10 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
             System.out.println(msg);
         } catch (IOException e1) {
             e1.printStackTrace();
+        } catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+        } catch (InterruptedException e1) {
+            e1.printStackTrace();
         }
 //        connection.sendString(msg);
     }
@@ -126,12 +125,15 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
 
 //        sending message (String)
     @Override
-    public void onReceiveString(TCPConnection tcpConnection, String value) {
+    public void onReceiveString(TCPConnection tcpConnection, String value) throws IOException {
         printMsg(value);
 //        здесь у нас значения, которые приходят от сервера
+//===========================================================================================================
 
-        messages.add(new MsgFromServer(value));
+
+        new MsgFromServer(value);
         outputFlow.add(value);
+//        notify();
     }
 
 

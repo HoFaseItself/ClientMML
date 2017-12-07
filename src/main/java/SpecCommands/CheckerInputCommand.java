@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class CheckerInputCommand {
 
-    public String checkingFirst(String inputCommand) throws IOException {
+    public String checkingFirst(String inputCommand) throws IOException, ClassNotFoundException, InterruptedException {
 //        System.out.println(inputCommand);
         if (inputCommand.contains("#")) {
 //            System.out.println(inputCommand);
@@ -23,7 +23,7 @@ public class CheckerInputCommand {
         }
     }
 
-    private void checkingSpecCom(String[] split) throws IOException {
+    private void checkingSpecCom(String[] split) throws IOException, ClassNotFoundException, InterruptedException {
         if (split[0].toLowerCase().equals("#help")) {
             new Help();
 //            OutputWindow outputWindow = new OutputWindow();
@@ -38,7 +38,7 @@ public class CheckerInputCommand {
 //            new FindPra(split);
 //        }
         else if (split[0].toLowerCase().equals("#findcnacld")){
-            new FindCnacld(split);
+            new Thread(new FindCnacld(split));
         }
     }
 }

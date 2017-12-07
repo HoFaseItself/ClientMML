@@ -8,6 +8,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class LoginWindow extends JFrame implements ActionListener{
 
@@ -86,7 +87,11 @@ public class LoginWindow extends JFrame implements ActionListener{
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new ClientWindow();
+                try {
+                    new ClientWindow();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
     }

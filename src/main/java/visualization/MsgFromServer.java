@@ -1,6 +1,8 @@
 package visualization;
 
-public class MsgFromServer {
+import java.io.Serializable;
+
+public class MsgFromServer implements Serializable{
     private String inputMsg;
 
     public String getInputMsg() {
@@ -9,5 +11,6 @@ public class MsgFromServer {
 
     public MsgFromServer(String inputMsg) {
         this.inputMsg = inputMsg;
+        ClientWindow.meSSage.add(inputMsg);
     }
 }

@@ -18,7 +18,11 @@ public class ServerForTest {
             String s = br.readLine();
             if (s != null || s != "") {
 //                System.out.println(input);
-                bw.write("Answer from Server: ====> " + s + "\n");
+                bw.write("Answer from Server: ====> " + s + "1\n");
+                bw.write("Answer from Server: ====> " + s + "2\n");
+                bw.write("Answer from Server: ====> " + s + "3\n");
+                bw.write("Answer from Server: ====> " + s + "4\n");
+
                 bw.flush();
             }
         }
