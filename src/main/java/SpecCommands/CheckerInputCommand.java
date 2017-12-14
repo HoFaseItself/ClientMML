@@ -40,5 +40,8 @@ public class CheckerInputCommand {
         else if (split[0].toLowerCase().equals("#findcnacld")){
             new Thread(new FindCnacld(split));
         }
+        else if (split[0].toLowerCase().equals("#lsttg")){
+            new Thread((new LstTg()));
+        }
     }
 }

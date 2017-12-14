@@ -101,7 +101,8 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         fieldInput.setText(null);
 //        посылаем команду на сервер
         try {
-            connection.sendString(new CheckerInputCommand().checkingFirst(msg));
+//            connection.sendString(new CheckerInputCommand().checkingFirst(msg));
+            new CheckerInputCommand().checkingFirst(msg);
             System.out.println(msg);
         } catch (IOException e1) {
             e1.printStackTrace();
@@ -130,8 +131,9 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
 //        здесь у нас значения, которые приходят от сервера
 //===========================================================================================================
 
-
-        new MsgFromServer(value);
+//        System.out.println(value);
+        meSSage.add(value);
+//        System.out.println(meSSage.size());;
         outputFlow.add(value);
 //        notify();
     }
