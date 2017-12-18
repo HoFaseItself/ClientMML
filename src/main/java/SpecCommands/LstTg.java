@@ -2,6 +2,7 @@ package SpecCommands;
 
 
 import visualization.ClientWindow;
+import visualization.OutputWindow;
 
 import java.util.ArrayList;
 
@@ -13,20 +14,11 @@ public class LstTg extends SpecCommand{
     private ArrayList<String> tkc = new ArrayList<String>();
 
     public LstTg() throws InterruptedException {
-////      чистим массив данных
-//        ClientWindow.meSSage.clear();
-////      посылаем сформированную команду на сервер
-//        ClientWindow.connection.sendString();
-//
-////      ждем пока новые данные не появятся в файле данных
-//        while (ClientWindow.meSSage.size() < 1);
+
         clearingInputData("LST TG:;");
 
-//        System.out.println(ClientWindow.meSSage.size());
-
-
         for (String line: ClientWindow.meSSage) {
-//            System.out.println("----");
+
             if (line.contains("Master/Slave")) continue;
 
 //            System.out.println("прошли на запись данных");
@@ -45,6 +37,7 @@ public class LstTg extends SpecCommand{
                 System.out.println(tgNumber.size() + " " + tgName.size() + " " + opc.size() + " " + dpc.size());
             }
         }
+        outputWindow = new OutputWindow();
         outputWindow.printMsg("Total number of trunks: " + tgNumber.size() + "\t");
         System.out.println("finish load");
         for (int i = 0; i < tgNumber.size(); i++) {
@@ -75,7 +68,7 @@ public class LstTg extends SpecCommand{
         }
     }
 
-    private void clearingInputData(String inputCommand) throws InterruptedException {
+    public void clearingInputData(String inputCommand) throws InterruptedException {
      /*
     метод чистит массив данных прияных от сервера, посылает команду на сервер и ждет
     пока масиив полученных данных не начнет наполняться
@@ -95,6 +88,6 @@ public class LstTg extends SpecCommand{
             if (ClientWindow.meSSage.size() > 3) check = false;
         }
 //        sleep(1000);
-        System.out.println("<============+=============>");
+//        System.out.println("<============+=============>");
     }
 }
