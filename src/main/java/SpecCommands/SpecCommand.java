@@ -27,8 +27,8 @@ public class SpecCommand extends Thread{
 //        while (ClientWindow.meSSage.size() < 1);
         boolean check = true;
         while (check){
-            sleep(1000);
-            if (ClientWindow.meSSage.size() > 3) check = false;
+            sleep(2000);
+            if (ClientWindow.meSSage.size() > 5) check = false;
         }
 //        System.out.println("<============+=============>");
     }

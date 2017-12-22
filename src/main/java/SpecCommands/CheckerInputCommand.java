@@ -46,5 +46,8 @@ public class CheckerInputCommand {
         else if (split[0].toLowerCase().equals("#oftk")){
             new Thread(new OFTK(split));
         }
+        else if (split[0].toLowerCase().equals("#rtana")){
+            new Thread(new Rtana());
+        }
     }
 }
