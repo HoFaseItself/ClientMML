@@ -7,7 +7,7 @@ import java.nio.charset.Charset;
 
 public class ServerForTest {
 
-    public static void main(String[] args)  throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         ServerSocket serverSocket = new ServerSocket(6000);
         System.out.println("Server Started:");
         Socket socket = serverSocket.accept();
@@ -19,10 +19,16 @@ public class ServerForTest {
             if (s != null || s != "") {
 //                System.out.println(input);
                 bw.write("Answer from Server: ====> " + s + "1\n");
-                bw.write("Answer from Server: ====> " + s + "2\n");
-                bw.write("Answer from Server: ====> " + s + "3\n");
-                bw.write("Answer from Server: ====> " + s + "4\n");
+                System.out.println(s);
 
+                if (s.contains("LST TG")) {
+                    for (int i = 10; i >= 0; i--) {
+                        System.out.println(i);
+                        bw.write(String.format("Line number %d!", i));
+//                        Thread.sleep(200);
+                    }
+                    bw.write("And Fly!!!");
+                }
                 bw.flush();
             }
         }

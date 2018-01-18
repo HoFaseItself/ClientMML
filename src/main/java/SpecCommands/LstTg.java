@@ -20,19 +20,13 @@ public class LstTg extends SpecCommand{
         for (String line: ClientWindow.meSSage) {
 
             if (line.contains("Master/Slave")) continue;
-
-//            System.out.println("прошли на запись данных");
             if (line.contains("(Number of results =")) break;
 
             if (line.contains("Master")) {
                 String[] arr = line.split("\\s+");
-//                System.out.println(line);
-//                System.out.println("0: " + arr[0] + " 1: " + arr[1] + " 2: " + arr[2] +" 3: " + arr[3] +" 4: " + arr[4] +" 5: " + arr[5] +" 6: " + arr[6] );
                 tgNumber.add(arr[1]);
                 tgName.add(arr[2]);
-//                opc.add((Integer.parseInt(arr[3], 10) + ""));
                 opc.add(arr[3]);
-//                dpc.add((Integer.parseInt(arr[4], 10) + ""));
                 dpc.add(arr[4]);
                 System.out.println(tgNumber.size() + " " + tgName.size() + " " + opc.size() + " " + dpc.size());
             }
@@ -64,7 +58,6 @@ public class LstTg extends SpecCommand{
         String param = "%s %s %s Scala %s filial MedId %s %s";
         for (int i = 0; i < tgNumber.size(); i++) {
             outputWindow.printMsg(String.format(param, softxName, opc.get(i), dpc.get(i), tgName.get(i), tgNumber.get(i), tkc.get(i)));
-//            System.out.println(String.format(param, opc.get(i), dpc.get(i), tgName.get(i), tgNumber.get(i), tkc.get(i)));
         }
     }
 
@@ -85,9 +78,9 @@ public class LstTg extends SpecCommand{
         boolean check = true;
         while (check){
             sleep(1000);
-            if (ClientWindow.meSSage.size() > 3) check = false;
+            System.out.println(ClientWindow.meSSage.size() + " " + ClientWindow.meSSage.get(ClientWindow.meSSage.size()-1));
+            if (ClientWindow.meSSage.size() > 0) check = false;
         }
-//        sleep(1000);
 //        System.out.println("<============+=============>");
     }
 }

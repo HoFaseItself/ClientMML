@@ -3,9 +3,14 @@ package SpecCommands;
 import visualization.ClientWindow;
 import visualization.OutputWindow;
 
-import java.lang.reflect.Array;
+import javax.xml.crypto.Data;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class OFTK extends SpecCommand {
 
@@ -20,6 +25,7 @@ public class OFTK extends SpecCommand {
     private ArrayList<String> block = new ArrayList<String>();
     private ArrayList<String> lock = new ArrayList<String>();
     private ArrayList<String> fault = new ArrayList<String>();
+    private ArrayList<Date> date =  new ArrayList<Date>();
     private String installed;
 
 /*
@@ -27,12 +33,16 @@ public class OFTK extends SpecCommand {
     * второй элемент номер транковой группы
     * третий количество итераций в часах(в первом приближении будем делать в минутах)
  */
-    public OFTK(String[] split) throws InterruptedException {
+    public OFTK(String[] split) throws InterruptedException, ParseException {
 //        this.split = split;
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ssX");
+
         numberTg = split[1];
         System.out.println(split[2]);
         countIteration = Integer.parseInt(split[2]);
         boolean checkWindow = true;
+        String pat = "\\+{3}\\s+\\w+\\s+";
         for (int i = 0; i < countIteration; i++) {
 
             String command = String.format("DSP OFTK: LT=ONO, ONO=%s, DT=AT;", numberTg);
@@ -40,6 +50,14 @@ public class OFTK extends SpecCommand {
             clearingInputData(command);
             boolean check = false;
             for (String line : ClientWindow.meSSage) {
+                if (line.contains("+++")) {
+                    String sssss = Pattern.compile(pat).matcher(line).replaceFirst("");
+                    System.out.println(sssss + " <<<<<<<<<<<<<<<");
+                    Date date1 = dateFormat.parse(sssss);
+                    System.out.println(date1.toString() + " <=================");
+                    date.add(date1);
+
+                }
 //            пропускаем первую часть
                 if (line.contains("Sum of trunk")) check = true;
                 if (check) {

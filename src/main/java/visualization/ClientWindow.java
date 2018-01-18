@@ -11,6 +11,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 public class ClientWindow extends JFrame implements ActionListener, TCPConnectionListener{
@@ -110,6 +111,8 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
             e1.printStackTrace();
         } catch (InterruptedException e1) {
             e1.printStackTrace();
+        } catch (ParseException e1) {
+            e1.printStackTrace();
         }
 //        connection.sendString(msg);
     }
@@ -128,13 +131,14 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     @Override
     public void onReceiveString(TCPConnection tcpConnection, String value) throws IOException {
         printMsg(value);
+
 //        здесь у нас значения, которые приходят от сервера
 //===========================================================================================================
 
 //        System.out.println(value);
         meSSage.add(value);
 //        System.out.println(meSSage.size());;
-        outputFlow.add(value);
+//        outputFlow.add(value);
 //        notify();
     }
 

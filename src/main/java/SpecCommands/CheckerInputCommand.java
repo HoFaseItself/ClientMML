@@ -5,10 +5,11 @@ import visualization.ClientWindow;
 import visualization.OutputWindow;
 
 import java.io.IOException;
+import java.text.ParseException;
 
 public class CheckerInputCommand {
 
-    public String checkingFirst(String inputCommand) throws IOException, ClassNotFoundException, InterruptedException {
+    public String checkingFirst(String inputCommand) throws IOException, ClassNotFoundException, InterruptedException, ParseException {
 //        System.out.println(inputCommand);
         if (inputCommand.contains("#")) {
 //            System.out.println(inputCommand);
@@ -23,7 +24,7 @@ public class CheckerInputCommand {
         }
     }
 
-    private void checkingSpecCom(String[] split) throws IOException, ClassNotFoundException, InterruptedException {
+    private void checkingSpecCom(String[] split) throws IOException, ClassNotFoundException, InterruptedException, ParseException {
         if (split[0].toLowerCase().equals("#help")) {
             new Help();
 //            OutputWindow outputWindow = new OutputWindow();
@@ -41,7 +42,8 @@ public class CheckerInputCommand {
             new Thread(new FindCnacld(split));
         }
         else if (split[0].toLowerCase().equals("#lsttg")){
-            new Thread(new LstTg());
+//            new Thread(new LstTg());
+            new LstTg();
         }
         else if (split[0].toLowerCase().equals("#oftk")){
             new Thread(new OFTK(split));
