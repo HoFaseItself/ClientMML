@@ -7,21 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7b2f9de-4a90-4f46-ba91-8ed02425cd15" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/forTesting/Test.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ForWorkInHuawei_jar/ForWorkInHuawei.jar" afterPath="$PROJECT_DIR$/out/artifacts/ForWorkInHuawei_jar/ForWorkInHuawei.jar" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpecCommands/CheckerInputCommand.java" afterPath="$PROJECT_DIR$/src/main/java/SpecCommands/CheckerInputCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpecCommands/LstTg.java" afterPath="$PROJECT_DIR$/src/main/java/SpecCommands/LstTg.java" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ForWorkInHuawei_jar/ForWorkInHuawei.jar" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SpecCommands/OFTK.java" afterPath="$PROJECT_DIR$/src/main/java/SpecCommands/OFTK.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/network/ServerForTest.java" afterPath="$PROJECT_DIR$/src/main/java/network/ServerForTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/visualization/ClientWindow.java" afterPath="$PROJECT_DIR$/src/main/java/visualization/ClientWindow.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SpecCommands/CheckerInputCommand.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SpecCommands/LstTg.class" afterPath="$PROJECT_DIR$/target/classes/SpecCommands/LstTg.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SpecCommands/OFTK.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/network/ServerForTest.class" afterPath="$PROJECT_DIR$/target/classes/network/ServerForTest.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/visualization/ClientWindow$1.class" afterPath="$PROJECT_DIR$/target/classes/visualization/ClientWindow$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/visualization/ClientWindow$2.class" afterPath="$PROJECT_DIR$/target/classes/visualization/ClientWindow$2.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/visualization/ClientWindow.class" afterPath="$PROJECT_DIR$/target/classes/visualization/ClientWindow.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forTesting/Test.java" afterPath="$PROJECT_DIR$/src/main/java/forTesting/Test.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpecCommands/OFTK.class" afterPath="$PROJECT_DIR$/target/classes/SpecCommands/OFTK.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/forTesting/Test.class" afterPath="$PROJECT_DIR$/target/classes/forTesting/Test.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,13 +28,11 @@
       <file leaf-file-name="ClientWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/visualization/ClientWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="114" column="33" lean-forward="true" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+            <state relative-caret-position="1598">
+              <caret line="114" column="33" lean-forward="false" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
               <folding>
                 <element signature="e#5332#5333#0" expanded="true" />
                 <element signature="e#5386#5387#0" expanded="true" />
-                <element signature="e#5506#5707#0" expanded="true" />
-                <element signature="e#5706#5707#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/SpecCommands/CheckerInputCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -62,11 +51,16 @@
       <file leaf-file-name="OFTK.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/SpecCommands/OFTK.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="632">
+              <caret line="96" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#909#915#0" expanded="true" />
+                <element signature="e#644#652#0" expanded="true" />
+                <element signature="e#706#714#0" expanded="true" />
+                <element signature="e#769#777#0" expanded="true" />
+                <element signature="e#831#839#0" expanded="true" />
+                <element signature="e#894#902#0" expanded="true" />
+                <element signature="e#955#961#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,8 +69,8 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/forTesting/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="78" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="78" />
+            <state relative-caret-position="374">
+              <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,9 +140,9 @@
         <option value="$PROJECT_DIR$/src/main/java/SpecCommands/SpecCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/network/ServerForTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/SpecCommands/LstTg.java" />
-        <option value="$PROJECT_DIR$/src/main/java/forTesting/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/SpecCommands/CheckerInputCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/visualization/ClientWindow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forTesting/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/SpecCommands/OFTK.java" />
       </list>
     </option>
@@ -176,11 +170,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="726" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1608" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="912" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -213,9 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,7 +277,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -510,29 +504,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1364" height="726" extended-state="1" />
+    <frame x="-1608" y="-8" width="1616" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32420748" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3210191" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31535947" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28874388" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29827088" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34125766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17866324" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5082803" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -585,8 +579,6 @@
           <folding>
             <element signature="e#5332#5333#0" expanded="true" />
             <element signature="e#5386#5387#0" expanded="true" />
-            <element signature="e#5506#5707#0" expanded="true" />
-            <element signature="e#5706#5707#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -633,8 +625,6 @@
           <folding>
             <element signature="e#5332#5333#0" expanded="true" />
             <element signature="e#5386#5387#0" expanded="true" />
-            <element signature="e#5506#5707#0" expanded="true" />
-            <element signature="e#5706#5707#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -783,10 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1445">
           <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding>
-            <element signature="e#3348#3607#0" expanded="false" />
-            <element signature="e#3606#3607#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -794,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,7 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
           <caret line="473" column="37" lean-forward="true" selection-start-line="473" selection-start-column="37" selection-end-line="473" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,12 +839,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forTesting/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/visualization/ClientWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="78" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="78" />
+        <state relative-caret-position="1598">
+          <caret line="114" column="33" lean-forward="false" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#5332#5333#0" expanded="true" />
+            <element signature="e#5386#5387#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -868,31 +853,33 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/SpecCommands/CheckerInputCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/visualization/ClientWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/forTesting/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="114" column="33" lean-forward="true" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+        <state relative-caret-position="374">
+          <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="75" />
           <folding>
-            <element signature="e#5332#5333#0" expanded="true" />
-            <element signature="e#5386#5387#0" expanded="true" />
-            <element signature="e#5506#5707#0" expanded="true" />
-            <element signature="e#5706#5707#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SpecCommands/OFTK.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="632">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#909#915#0" expanded="true" />
+            <element signature="e#644#652#0" expanded="true" />
+            <element signature="e#706#714#0" expanded="true" />
+            <element signature="e#769#777#0" expanded="true" />
+            <element signature="e#831#839#0" expanded="true" />
+            <element signature="e#894#902#0" expanded="true" />
+            <element signature="e#955#961#0" expanded="true" />
           </folding>
         </state>
       </provider>
